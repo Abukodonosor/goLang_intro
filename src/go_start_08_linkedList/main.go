@@ -1,5 +1,6 @@
 package main
 
+// if you need some explenations: https://ieftimov.com/golang-datastructures-linked-lists
 import (
 	"fmt"
 )
