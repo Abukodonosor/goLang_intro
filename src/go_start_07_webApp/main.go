@@ -48,8 +48,8 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	// declare routes of webApp
-	http.HandleFunc("/", handler)
-	http.HandleFunc("/home", homeHandler)
+	go http.HandleFunc("/", handler)
+	go http.HandleFunc("/home", homeHandler)
 
 	http.HandleFunc("/menu", manuHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
